@@ -1,3 +1,18 @@
-from django.db import models
+from django.contrib.auth.models import AbstractUser
+from django.db.models import Model
 
-# Create your models here.
+
+class User(AbstractUser):
+    pass
+
+
+class Product(Model):
+    pass
+
+
+class ShoppingCart(Model):
+    pass
+
+
+class Payments(Model):
+    pass

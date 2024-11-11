@@ -1,26 +1,33 @@
 from rest_framework.serializers import ModelSerializer
 
-from apps.models import Category, Product
+from apps.models import Category, Product, Transaction, Order, ProductImage
 
 
 class ProductModelSerializer(ModelSerializer):
     class Meta:
         model = Product
+        fields = '__all__'
 
 
 class ProductImageModelSerializer(ModelSerializer):
-    pass
+    class Meta:
+        model = ProductImage
+        fields = '__all__'
 
 
 class CategoryModelSerializer(ModelSerializer):
     class Meta:
         model = Category
-        fields = 'name', 'slug',
+        fields = '__all__'
 
 
 class OrderModelSerializer(ModelSerializer):
-    pass
+    class Meta:
+        model = Order
+        fields = '__all__'
 
 
-class Transaction(ModelSerializer):
-    pass
+class TransactionModelSerializer(ModelSerializer):
+    class Meta:
+        model = Transaction
+        fields = '__all__'

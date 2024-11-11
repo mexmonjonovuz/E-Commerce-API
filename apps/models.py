@@ -33,12 +33,12 @@ class Product(TimeBaseModel):
     description = CharField(max_length=255)
     price = FloatField(db_default=0)
     discount_price = FloatField(db_default=0)
-    category = ForeignKey('apps.Category', CASCADE, related_name='product')
+    category = ForeignKey('apps.Category', CASCADE, related_name='products')
 
 
 class ProductImage(Model):
     image = ImageField(upload_to='products/%Y/%m/%d/')
-    product = OneToOneField('apps.Product', CASCADE, related_name='product')
+    product = OneToOneField('apps.Product', CASCADE, related_name='products')
 
 
 class Order(Model):

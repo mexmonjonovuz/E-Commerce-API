@@ -1,6 +1,6 @@
 from django.contrib.auth.models import AbstractUser
-from django.db.models import Model, FloatField, CharField, ImageField, OneToOneField, CASCADE, ForeignKey, SlugField, \
-    DateTimeField
+from django.db.models import Model, FloatField, CharField, CASCADE, ForeignKey, SlugField, DateTimeField, OneToOneField, \
+    ImageField
 from django.utils.text import slugify
 
 
@@ -41,9 +41,8 @@ class ProductImage(Model):
     product = OneToOneField('apps.Product', CASCADE, related_name='product')
 
 
-class Basket(Model):
+class Order(Model):
     pass
 
-
-class Payments(Model):
+class Transaction(TimeBaseModel):
     pass

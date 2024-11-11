@@ -15,7 +15,7 @@ class ProductImageModelSerializer(ModelSerializer):
 class CategoryModelSerializer(ModelSerializer):
     class Meta:
         model = Category
-        extends = 'slug',
+        fields = 'name', 'slug',
 
 
 class OrderModelSerializer(ModelSerializer):
@@ -24,4 +24,3 @@ class OrderModelSerializer(ModelSerializer):
 
 class Transaction(ModelSerializer):
     pass
-

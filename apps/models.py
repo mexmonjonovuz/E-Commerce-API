@@ -42,7 +42,8 @@ class ProductImage(Model):
 
 
 class Order(Model):
-    pass
+    created_at = DateTimeField(auto_now=True)
+
 
 class Transaction(TimeBaseModel):
     pass
